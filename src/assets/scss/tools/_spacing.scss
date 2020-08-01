@@ -1,0 +1,45 @@
+/* -----------------------------------------------------------------------------
+
+# Tools - Spacing
+
+----------------------------------------------------------------------------- */
+
+.padding {
+  padding: (5 * $space) (2 * $space);
+
+  @include mq("desktop-s") {
+    padding: (3 * $space) (2 * $space);
+  }
+
+  @include mq("tablet") {
+    padding: (3 * $space) $space;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 5 * $space;
+
+  @include mq("desktop-s") {
+    margin-bottom: 3 * $space;
+  }
+}
+
+.margin-top {
+  margin-top: 5 * $space;
+
+  @include mq("desktop-s") {
+    margin-top: 3 * $space;
+  }
+}
+
+.space-bottom {
+  margin-bottom: $space;
+}
+
+.space-top {
+  margin-top: $space;
+}
+
+.space-right {
+  margin-right: $space;
+}

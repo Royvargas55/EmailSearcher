@@ -1,0 +1,40 @@
+/* -----------------------------------------------------------------------------
+
+# Pages - Onboarding
+
+----------------------------------------------------------------------------- */
+
+.page-onboarding {
+  padding: $space;
+
+  .logo {
+    margin-bottom: $space;
+    opacity: $opacity-l;
+  }
+
+  .form-help {
+    line-height: 2.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @include mq("mobile") {
+    background: $color-white;
+    
+    .logo {
+      display: none;
+    }
+
+    .card {
+      @include rounded(0);
+      @include shadow-none;
+      background: transparent;
+      padding: 0;
+    }
+	}
+}

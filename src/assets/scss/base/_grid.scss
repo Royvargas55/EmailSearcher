@@ -1,0 +1,122 @@
+/* -----------------------------------------------------------------------------
+
+# Base - Grid
+
+----------------------------------------------------------------------------- */
+
+$width: 100%;
+$gutter: 4%;
+
+.row {
+  @include flex;
+  @include flex-wrap;
+  width: $width;
+
+  .col-one-half { width: $width / 2 - $gutter * 1 / 2; }
+  .col-one-third { width: $width / 3 - $gutter * 2 / 3; }
+  .col-one-fourth { width: $width / 4 - $gutter * 3 / 4; }
+  .col-one-fifth { width: $width / 5 - $gutter * 4 / 5; }
+  .col-two-thirds { width: ($width / 3 - $gutter * 2 / 3) * 2 + $gutter; }
+  .col-two-fourths { width: ($width / 4 - $gutter * 3 / 4) * 2 + $gutter; }
+  .col-two-fifths { width: ($width / 5 - $gutter * 4 / 5) * 2 + $gutter; }
+  .col-three-fourths { width: ($width / 4 - $gutter * 3 / 4) * 3 + 2 * $gutter; }
+  .col-three-fifths { width: ($width / 5 - $gutter * 4 / 5) * 3 + 2 * $gutter; }
+  .col-four-fifths { width: ($width / 5 - $gutter * 4 / 5) * 4 + 3 * $gutter; }
+
+  [class^="col-"] {
+    float: left;
+    margin: 0 ($gutter / 2);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include mq("desktop-s") {
+    [class^="col-"] {
+      margin: (1.5 * $space) 0;
+      width: $width;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .col-one-half {
+      margin: 0 ($gutter / 2);
+      width: $width / 2 - $gutter * 1 / 2;
+    }
+
+    .col-one-fourth {
+      margin: 0 ($gutter / 2);
+      width: $width / 2 - $gutter * 1 / 2;
+
+      &:nth-child(-n+2) {
+        margin-bottom: 3 * $space;
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @include mq("tablet") {
+    [class^="col-"] {
+      margin: (1.5 * $space) 0;
+      width: $width;
+    }
+
+    .col-one-fourth:nth-child(-n+2) {
+      margin-bottom: 1.5 * $space;
+    }
+  }
+}
+
+/* Remove gutter between columns */
+
+.row.no-gutter {
+  .col-one-half { width: $width / 2; }
+  .col-one-third { width: $width / 3; }
+  .col-one-fourth { width: $width / 4; }
+  .col-one-fifth { width: $width / 5; }
+  .col-two-thirds { width: ($width / 3) * 2; }
+  .col-two-fourths { width: ($width / 4) * 2; }
+  .col-two-fifths { width: ($width / 5) * 2; }
+  .col-three-fourths { width: ($width / 4) * 3; }
+  .col-three-fifths { width: ($width / 5) * 3; }
+  .col-four-fifths { width: ($width / 5) * 4; }
+
+  [class^="col-"] {
+    margin: 0;
+  }
+
+  @include mq("desktop-s") {
+    [class^="col-"] {
+      width: $width;
+    }
+
+    .col-one-half,
+    .col-one-fourth {
+      width: $width / 2;
+    }
+  }
+
+  @include mq("tablet") {
+    [class^="col-"] {
+      width: $width;
+    }
+  }
+}

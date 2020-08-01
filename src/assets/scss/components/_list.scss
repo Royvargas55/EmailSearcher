@@ -1,0 +1,36 @@
+/* -----------------------------------------------------------------------------
+
+# Components - List
+
+----------------------------------------------------------------------------- */
+
+ol,
+ul {
+  margin: 0 0 $space 0;
+  padding-left: 1.25rem;
+
+  &.inline {
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding-right: $space;
+      vertical-align: top;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &.blank {
+    list-style: none;
+    padding: 0;
+  }
+
+  @include mq("desktop-s") {
+    li {
+      margin-bottom: 0.5 * $space;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/* -----------------------------------------------------------------------------
+
+# Tools - Background
+
+----------------------------------------------------------------------------- */
+
+.bg-primary {
+  background: $color-primary;
+}
+
+.bg-white {
+  background: $color-white;
+}
+
+/* Gradients */
+
+.bg-gradient-blue {
+  @include linear-gradient(#2584e0, #0957d9);
+}

@@ -1,0 +1,35 @@
+/* -----------------------------------------------------------------------------
+
+# Components - Logo
+
+----------------------------------------------------------------------------- */
+
+.logo {
+  @include transition;
+  color: $color-text;
+  display: inline-block;
+  font-weight: 900;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  position: relative;
+  text-transform: uppercase;
+
+  .logo-icon {
+    height: 1.5rem;
+    left: 0;
+    position: absolute;
+    width: 1.5rem;
+  }
+
+  span {
+    padding-left: 1.75rem;
+  }
+
+  .dark & {
+    color: $color-white;
+  }
+
+  @include mq("tablet") {
+    @include transition-none;
+  }
+}
