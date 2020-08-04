@@ -5,16 +5,12 @@
 ----------------------------------------------------------------------------- */
 
 .card {
-  @include rounded;
+  @include rounded(50px);
   @include shadow-m;
   background: $color-white;
   padding: 2 * $space;
 
   @include mq("mobile") {
     padding: $space;
-  }
-
-  .dark & {
-    background: $color-text;
   }
 }

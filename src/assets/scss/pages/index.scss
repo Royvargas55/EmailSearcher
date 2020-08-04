@@ -1,21 +1,15 @@
 /* -----------------------------------------------------------------------------
 
-# Tools - Full Width
+# Pages - Onboarding
 
 ----------------------------------------------------------------------------- */
 
-.full-width {
-  width: 100%;
-
+.view-box{
+  @include card-box;
+}
+.card-box{
+  @include card-box;
   @include mq("tablet") {
-    &-tablet {
-      width: 100%;
-    }
-  }
-
-  @include mq("mobile") {
-    &-mobile {
-      width: 100%;
-    }
+    padding: 0;
   }
 }

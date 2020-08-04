@@ -1,52 +1,20 @@
-/*!
- *
- *   Template Name: Startup Landing Page
- *   Template URI: https://uiuxassets.com/assets/startup-landing-page/
- *   Author: UI/UX Assets <hello@uiuxassets.com>
- *   Author URI: https://uiuxassets.com/
- *   Version: v1.0.0
- *   License: GNU General Public License, Version 2
- *   License URI: http://www.gnu.org/licenses/gpl-2.0.html
- *   Copyright (C) 2017 UI/UX Assets
- *
-*/
-
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-// Base
 
 @import "base/variables";
 @import "base/mixins";
 @import "base/reset";
 @import "base/typography";
 @import "base/grid";
-
-// // Tools
-
 @import "tools/align";
 @import "tools/background";
-// @import "tools/divider";
-// @import "tools/full-screen";
-// @import "tools/full-width";
 @import "tools/max-width";
-// @import "tools/min-width";
 @import "tools/rounded";
 @import "tools/spacing";
-
-// // Components
-
-// @import "components/alerts"; 
 @import "components/buttons";
-// @import "components/card";
-// @import "components/footer";
+@import "components/card";
+@import "components/footer";
 @import "components/forms";
 @import "components/header";
-// @import "components/icons";
-// @import "components/list";
-// @import "components/logo";
-
-// // Pages
-
-// @import "pages/onboarding";
-// @import "pages/style-guide";
+@import "components/icons";
+@import "pages/index";

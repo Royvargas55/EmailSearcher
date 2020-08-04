@@ -3,3 +3,10 @@
 # Components - Footer
 
 ----------------------------------------------------------------------------- */
+.footer-terms{
+    text-align: end;
+    align-self: center;
+    @include mq("desktop-s") {
+        text-align: center;
+    }
+}

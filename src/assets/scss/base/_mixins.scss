@@ -117,23 +117,34 @@
   background: -o-linear-gradient(to bottom right, $from 0%, $to 100%);
   background: linear-gradient(to bottom right, $from 0%, $to 100%);
 }
-
-// Rotations
-
-@mixin rotate($degree: 90deg) {
-  -webkit-transform: rotate($degree);
-  -moz-transform: rotate($degree);
-  -ms-transform: rotate($degree);
-  -o-transform: rotate($degree);
-  transform: rotate($degree);
-}
-
 // Rounded corners
 
 @mixin rounded($radius: 0.1875rem) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
+}
+
+@mixin card-box($padding: 0) {
+  position: relative;
+  padding-left: $padding;
+}
+
+@mixin card-box {
+  position: relative;
+  padding-left: 100px;
+}
+
+@mixin feature-icons {
+  color: $color-accent;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  font-size: 48px;
+  position: absolute;
+  left: 0;
+  top: 0; 
 }
 
 @mixin rounded-bottom($radius: 0.1875rem) {

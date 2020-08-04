@@ -99,7 +99,7 @@ h6 {
 
 p {
   margin: 0 0 $space 0;
-
+  font-size: 18px;
   &:last-child {
     margin: 0;
   }
@@ -120,22 +120,17 @@ p {
   letter-spacing: 0;
 }
 
+.primary-text{
+  color: $color-primary;
+}
+
+.secondary-text{
+  color: $color-grey;
+}
+
 span{
   font-size: 24px;
   color: $color-accent;
   letter-spacing: 0;
   font-weight: 600;
-}
-.paragraph {
-  @include font-size-paragraph;
-
-  @include mq("mobile") {
-    font-size: 1.125rem;
-    letter-spacing: normal;
-    line-height: 1.75rem;
-  }
-}
-
-.muted {
-  opacity: $opacity-m;
 }

@@ -5,12 +5,15 @@
 ----------------------------------------------------------------------------- */
 
 .feature-icons {
-  @include rounded(1rem);
+  @include rounded(50px);
   @include shadow-m;
-  font-size: 3rem;
-  height: 4rem;
-  line-height: 4rem;
-  margin-bottom: $space;
-  text-align: center;
-  width: 4rem;
+  @include feature-icons;
+}
+
+.card-profile{
+  @include rounded(50px);
+  @include feature-icons;
+  @include mq("tablet") {
+    display: none;
+  }
 }
