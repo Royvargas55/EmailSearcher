@@ -27,12 +27,13 @@
   @include justify-content;
 }
 
+/*Align center in tablets*/
 @include mq("tablet") {
   .center-tablet {
     text-align: center;
   }
 }
-
+/*Align center in mobiles*/
 @include mq("mobile") {
   .center-mobile {
     text-align: center;

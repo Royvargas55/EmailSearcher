@@ -4,14 +4,17 @@
 
 ----------------------------------------------------------------------------- */
 
+
+//Grid variables
 $width: 100%;
 $gutter: 4%;
+
 
 .row {
   @include flex;
   @include flex-wrap;
   width: $width;
-
+  //Set columns width
   .col-one-half { width: $width / 2 - $gutter * 1 / 2; }
   .col-one-third { width: $width / 3 - $gutter * 2 / 3; }
   .col-one-fourth { width: $width / 4 - $gutter * 3 / 4; }
@@ -22,7 +25,7 @@ $gutter: 4%;
   .col-three-fourths { width: ($width / 4 - $gutter * 3 / 4) * 3 + 2 * $gutter; }
   .col-three-fifths { width: ($width / 5 - $gutter * 4 / 5) * 3 + 2 * $gutter; }
   .col-four-fifths { width: ($width / 5 - $gutter * 4 / 5) * 4 + 3 * $gutter; }
-
+  //Specificity 
   [class^="col-"] {
     float: left;
     margin: 0 ($gutter / 2);

@@ -4,6 +4,7 @@
 
 ----------------------------------------------------------------------------- */
 
+/*Import utility mixins*/
 .feature-icons {
   @include rounded(50px);
   @include shadow-m;

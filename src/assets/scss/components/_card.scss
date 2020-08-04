@@ -14,3 +14,14 @@
     padding: $space;
   }
 }
+//Grid features container
+.view-box{
+  @include result-box;
+}
+//Tablet view
+.card-box{
+  @include result-box;
+  @include mq("tablet") {
+    padding: 0;
+  }
+}

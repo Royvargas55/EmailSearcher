@@ -40,7 +40,6 @@ gulp.task('sass', () => {
       .pipe(autoprefixer())
       .pipe(minifyCss())
     .pipe(sourcemaps.write('.'))
-    .pipe(concat('main.css'))
     .pipe(gulp.dest(dist_assets_folder + 'css'))
     .pipe(browserSync.stream());
 });
@@ -48,11 +47,16 @@ gulp.task('sass', () => {
 gulp.task('js', () => {
   return gulp.src([ src_assets_folder + 'js/**/*.js' ], { since: gulp.lastRun('js') })
     .pipe(sourcemaps.init())
-      .pipe(concat('all.js'))
-      .pipe(uglify())
+    .pipe(concat('all.js'))
+    .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist_assets_folder + 'js'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('copy', () => {
+  return gulp.src([ src_assets_folder + 'fonts/**/*.ttf' ])
+  .pipe(gulp.dest(dist_assets_folder + 'fonts'))
 });
 
 gulp.task('images', () => {
@@ -63,7 +67,7 @@ gulp.task('images', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.series('clear', 'views', 'sass', 'js', 'images'));
+gulp.task('build', gulp.series('clear', 'views', 'sass', 'js', 'images', 'copy'));
 
 gulp.task('dev', gulp.series('views', 'sass','js'));
 

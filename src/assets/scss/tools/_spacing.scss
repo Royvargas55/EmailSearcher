@@ -4,6 +4,10 @@
 
 ----------------------------------------------------------------------------- */
 
+/*
+#Space between items
+#Set margins and paddings
+*/
 .padding {
   padding: (5 * $space) (2 * $space);
 
@@ -16,7 +20,7 @@
   }
 }
 
-.footer-padding{
+.padding-low{
  padding: 1rem 2rem;
 }
 .margin-bottom {

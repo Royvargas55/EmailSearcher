@@ -125,16 +125,6 @@
   border-radius: $radius;
 }
 
-@mixin card-box($padding: 0) {
-  position: relative;
-  padding-left: $padding;
-}
-
-@mixin card-box {
-  position: relative;
-  padding-left: 100px;
-}
-
 @mixin feature-icons {
   color: $color-accent;
   width: 90px;
@@ -145,6 +135,12 @@
   position: absolute;
   left: 0;
   top: 0; 
+  font-family: $font-bold;
+}
+
+@mixin result-box {
+  position: relative;
+  padding-left: 100px;
 }
 
 @mixin rounded-bottom($radius: 0.1875rem) {

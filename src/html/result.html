@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My index 3</title>
+  <title>Email lookup</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui">
   <script src="https://kit.fontawesome.com/3e219b188c.js" crossorigin="anonymous"></script>
@@ -9,12 +9,14 @@
 <body>
   <!-- partial:partial/_navbar.html -->
   <!-- partial -->
-  <section class="bg-gradient-grey center padding">
-    <div class="margin-bottom max-width-m">
+
+  <!--Results card container-->
+  <section class="bg-gradient-grey center padding-low">
+    <div class="space-bottom max-width-m">
       <h1 class="primary-text">Result</h3>
       <p class="secondary-text">Look at the result below to see the details of the person you’re searched for.</p>
     </div>
-    <div class="margin-bottom max-width-m">
+    <div class="space-bottom max-width-m">
       <div class="card">
         <div class="card-box">
           <a href="" class="card-profile bg-primary"><i class="fas fa-user" aria-hidden="true"></i></a>
@@ -43,13 +45,17 @@
     </div>
   </section>
 
+  <!--Search box-->
   <section class="bg-primary center full-screen middle overlay padding">
     <div class="max-width-m">
       <h1>Can’t Find The Right Person?</h1>
       <p class="lead"><span>Try Again</span> - Make a new search.</p>
       <form class="row">
         <div class="col-two-thirds">
-          <input class="search" id="search" type="email" name="email" placeholder="Email">
+          <div class="input-group">
+            <input class="search" id="search" type="text" required>
+            <label class="label" id="email">EMAIL</label>
+          </div>
         </div>
         <div class="col-one-third">
           <input class="btn-primary full-width" id="btn" type="button" value="GO!">
@@ -58,8 +64,9 @@
       <strong class="subtittle left space-top float-left"><i class="fas fa-lock space-right"></i>Enter Any Email Address. They won't be notified.</strong>
     </div>
   </section>
+
   <!-- partial:partial/_footer.html -->
   <!-- partial -->
-  <script async src="/assets/js/all.js"></script>
+  <script src="/assets/js/all.js"></script>
 </body>
 </html>

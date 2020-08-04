@@ -6,6 +6,7 @@
 .footer-terms{
     text-align: end;
     align-self: center;
+    font-family: $font-bold;
     @include mq("desktop-s") {
         text-align: center;
     }
